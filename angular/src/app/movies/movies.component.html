@@ -1,0 +1,14 @@
+
+<div *ngFor="let movie of movies" style="display: inline-block;">
+<div class="card" style="width: 18rem; margin-right:30px">
+    <img src="{{movie.img}}" class="card-img-top"  style="height: 300px;">
+    <div class="card-body">
+      <h4 class="card-title">{{movie.name}}</h4>
+    
+      <button type="submit" (click)="details(movie.id)">detail</button>
+      
+    </div>
+   
+  </div>
+</div>
+

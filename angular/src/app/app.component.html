@@ -1,0 +1,26 @@
+
+    <div class="container-fluid p-0 mb-5">
+        <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-0">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Tuni</span>Flix</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-4">
+                    <a routerLink="/home" class="nav-item nav-link">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a routerLink="/movies" class="dropdown-item">movie</a>
+                            <a routerLink="/series" class="dropdown-item">serie</a>
+                        </div>
+                    </div>
+                    <a routerLink="/aboutus"class="nav-item nav-link">About US</a>
+                    <a routerLink="/contactus" class="nav-item nav-link">Contactus</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+<router-outlet> </router-outlet>

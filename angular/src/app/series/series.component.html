@@ -1,0 +1,11 @@
+
+<div *ngFor="let serie of series" style="display: inline-block;">
+<div class="card" style="width: 18rem; margin-right:30px">
+    <img src="{{serie.img}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{serie.name}}</h5>
+      <p class="card-text">{{serie.realisateur}}</p>
+      <a class="btn btn-primary"  (click)="details(serie.id)">Details</a>
+    </div>
+  </div>
+</div>

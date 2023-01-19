@@ -1,0 +1,76 @@
+<h2> Movies List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>  Name</th>
+            <th> Realisateur </th>
+            <th> Genre</th>
+            <th> <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Movie </button></th>
+        
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let movie of movies" >
+            <td> {{ movie.name }} </td>
+            <td> {{ movie.realisateur }} </td>
+            <td> {{ movie.genre }} </td>
+            <td>
+  
+                <button (click) = "deleteMovies(movie.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            <button (click) = "updateMovie(movie.id)" class = "btn btn-info"  data-bs-toggle="modal" data-bs-target="#exampleModal1" style="margin-left: 10px"> Update</button> 
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Button trigger modal -->
+
+    
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <form (ngSubmit) = "onSubmit()">
+    
+                <div class="form-group">
+                    <label> Name</label>
+                    <input type="text" class ="form-control" id = "name"
+                        [(ngModel)] = "movie.name" name="name">
+                </div>
+            
+                <div class="form-group">
+                    <label> Realisateur</label>
+                    <input type="text" class ="form-control" id = "realisateur"
+                        [(ngModel)] = "movie.realisateur" name="realisateur">
+                </div>
+                <div class="form-group">
+                    <label> Image Url </label>
+                    <input type="text" class ="form-control" id = "img"
+                        [(ngModel)] = "movie.img" name="img">
+                </div>
+                <div class="form-group">
+                    <label> Genre </label>
+                    <select class ="form-control" id = "genre" [(ngModel)]="movie.genre" name="genre">
+                        <option>Drama</option>
+                        <option>Action</option>
+                        <option>Comedie</option>
+                        <option>Anime</option>
+                        <option>Horror</option>
+                        <option>Romance</option>
+                  </select>
+                </div>
+          
+                <button class = "btn btn-success" type ="submit" data-bs-dismiss="modal" aria-label="Close">Submit</button>
+            
+            </form>
+        </div>
+       
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,20 @@
+
+<div class="container">
+
+    <form (ngSubmit) = "onSubmit()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+           [(ngModel)] = "contact.email" name="email" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Feed Back</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  [(ngModel)] = "contact.message" name="message"></textarea>
+          </div>
+          <div class="container">
+            <span id="rateMe1"></span>
+          </div>
+          
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
